@@ -27,7 +27,7 @@ install_dependencies() {
 # 安装 SmartDNS
 install_smartdns() {
     echo "正在安装 SmartDNS..."
-    wget https://github.com/pymumu/smartdns/releases/download/Release46/smartdns.1.2024.06.12-2222.x86_64-linux-all.tar.gz
+    wget https://github.com/uszhen/smartdns-dns/releases/download/Release46/smartdns.1.2024.06.12-2222.x86_64-linux-all.tar.gz
     tar zxf smartdns.1.2024.06.12-2222.x86_64-linux-all.tar.gz
     cd smartdns
     chmod +x ./install
@@ -45,7 +45,7 @@ install_adguardhome() {
 # 卸载 SmartDNS
 uninstall_smartdns() {
     echo "正在卸载 SmartDNS..."
-    wget https://github.com/pymumu/smartdns/releases/download/Release46/smartdns.1.2024.06.12-2222.x86_64-linux-all.tar.gz
+    wget https://github.com/uszhen/smartdns-dns/releases/download/Release46/smartdns.1.2024.06.12-2222.x86_64-linux-all.tar.gz
     tar zxf smartdns.1.2024.06.12-2222.x86_64-linux-all.tar.gz
     cd smartdns
     chmod +x ./install
