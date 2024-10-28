@@ -65,7 +65,7 @@ uninstall_adguardhome() {
 # 下载并配置 SmartDNS
 configure_smartdns() {
     mkdir -p /etc/smartdns
-    wget -O /etc/smartdns/smartdns.conf https://raw.githubusercontent.com/LidaoNote/OpenCode/refs/heads/main/SmartDNS/smartdns_s.conf
+    wget -O /etc/smartdns/smartdns.conf https://raw.githubusercontent.com/uszhen/OpenCode-SmartDNS/refs/heads/main/SmartDNS/smartdns_s.conf
 
     echo "设置监听端口..."
     if [ "$1" = "adguard" ]; then
@@ -94,7 +94,7 @@ configure_smartdns() {
     sed -i "s|server  运营商DNS1 -group china -exclude-default-group|server $dns1 -group china -exclude-default-group|g" /etc/smartdns/smartdns.conf
     sed -i "s|server  运营商DNS2 -group china -exclude-default-group|server $dns2 -group china -exclude-default-group|g" /etc/smartdns/smartdns.conf
 
-    wget -O /etc/smartdns/all_domains.conf https://github.com/LidaoNote/OpenCode/raw/refs/heads/main/SmartDNS/all_domains.conf
+    wget -O /etc/smartdns/all_domains.conf https://github.com/uszhen/OpenCode-SmartDNS/raw/refs/heads/main/SmartDNS/all_domains.conf
 
     echo "重启 SmartDNS 服务..."
     systemctl restart smartdns
@@ -104,7 +104,7 @@ configure_smartdns() {
 download_adguard_config() {
     mkdir -p /opt/AdGuardHome
     echo "正在下载 AdGuardHome 配置文件..."
-    wget -O /opt/AdGuardHome/AdGuardHome.yaml https://github.com/LidaoNote/OpenCode/raw/refs/heads/main/AdGuardHome/AdGuardHome.yaml
+    wget -O /opt/AdGuardHome/AdGuardHome.yaml https://github.com/uszhen/OpenCode-SmartDNS/raw/refs/heads/main/AdGuardHome/AdGuardHome.yaml
 
     # 检查下载是否成功
     if [ $? -eq 0 ]; then
